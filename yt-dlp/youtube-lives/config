@@ -1,0 +1,32 @@
+# 01 - Extrair cookies
+#--cookies-from-browser chrome
+
+# Videos antigos primeiro
+#--playlist-reverse
+
+# 02 - Pasta de download dos vídeos
+# Linux
+-P '/home/dudu/Vídeos'
+
+# Windows
+#-P 'A:\Youtube-Lives'
+
+# 03 - Saida do arquivo de vídeo
+# Linux
+-o "%(extractor)s/%(channel)s/%(playlist_index|)03d%(playlist_title& - |)s%(title)s.%(ext)s"
+
+# Windows 
+#-o "%(extractor)s\%(channel)s\%(playlist_index|)03d%(playlist_title& - |)s%(title)s.%(ext)s"
+
+# 08 - Incorporar capitulação no arquivo de video
+--embed-chapters
+
+# 09 - Incorporar miniatura como capa do vídeo/audio
+--embed-thumbnail
+
+# Sempre salvar em mkv
+-t mkv
+
+# 13 - Pegar apenas lives acontecendo ou que acabaram de acontecer
+--match-filters "is_live"
+

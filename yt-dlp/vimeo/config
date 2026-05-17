@@ -1,0 +1,27 @@
+# 01 - Extrair cookies do firefox
+#--cookies-from-browser firefox
+
+# 02 - Pasta de download dos vídeos
+# Linux
+#-P '/home/dudu/Porno/'
+# Windows
+-P 'C:\Users\lord_\Videos'
+
+
+# 03 - Saida do arquivo de vídeo
+-o "%(extractor)s/%(playlist_title)s/%(playlist_index|)03d%(playlist_index& - |)s%(playlist_title|)s%(playlist_title& - |)s%(title)s.%(ext)s"
+
+# 04 - Saida da miniatura
+#-o "thumbnail:%(extractor)s/%(webpage_url_basename)s/%(playlist_index|)03d%(playlist_index& - |)s%(playlist_title|)s%(playlist_title& - |)s%(title)s.%(ext)s"
+
+# 05 - Incorporar miniatura como capa do vídeo/audio
+--embed-thumbnail
+
+# 06 - Salvar miniatura no disco
+#--write-thumbnail
+
+# Idioma das legendas
+--sub-langs all
+
+# Incorporar Legendas e/ou live chat
+#--write-subs --write-auto-subs --embed-subs
